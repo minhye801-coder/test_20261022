@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학교 급식 속 비밀 코드</title>
+    <!-- Tailwind CSS 탑재 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 어린이 친화적인 구글 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nanum Gothic', sans-serif;
+            background-color: #f4faf6;
+        }
+        .font-jua {
+            font-family: 'Jua', sans-serif;
+        }
+        /* 부드러운 화면 전환 효과 */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between text-gray-800">
+
+<!-- 상단 헤더 -->
+<header class="bg-gradient-to-r from-emerald-600 to-green-500 text-white shadow-md p-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div class="flex items-center gap-3">
+            <span class="bg-yellow-400 text-emerald-950 font-bold px-3 py-1 rounded-full text-xs font-jua animate-bounce">TOP SECRET</span>
+            <h1 class="text-xl md:text-2xl font-jua tracking-wide">학교 급식 속 비밀 코드 🕵️‍♂️</h1>
+        </div>
+        <div class="text-right text-xs md:text-sm text-emerald-100 font-semibold">
+            영양교사 권민혜 선생님과 함께하는 지속가능 식생활 🌱
+        </div>
+    </div>
+</header>
+
+<!-- 메인 콘텐츠 영역 -->
+<main class="max-w-7xl mx-auto w-full flex-grow p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+<!-- 좌측 사이드바 컨트롤러 -->
+    <aside class="bg-white p-5 rounded-2xl shadow-xl border-2 border-emerald-100 flex flex-col gap-4 h-fit">
+        <h3 class="font-jua text-lg text-emerald-800 border-b pb-2 flex items-center gap-2">
+            ⚙️ 도입 수업 단계
+        </h3>
+        <p class="text-xs text-gray-500 leading-relaxed">
+            선생님, 스마트보드 화면을 간편하게 조작하여 아이들의 흥미를 자극하고 수업을 리드해보세요!
+        </p>
+        <nav class="flex flex-col gap-2" id="lesson-tabs">
+            <button onclick="switchTab(1)" id="tab-btn-1" class="tab-btn w-full text-left px-3 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 bg-emerald-50 text-emerald-700 border-l-4 border-emerald-600">
+                1. 난각번호란 무엇일까?
+            </button>
+            <button onclick="switchTab(2)" id="tab-btn-2" class="tab-btn w-full text-left px-3 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 text-gray-600 hover:bg-gray-50">
+                2. 닭이 사는 네 가지 세상 (1~4번)
+            </button>
+            <button onclick="switchTab(3)" id="tab-btn-3" class="tab-btn w-full text-left px-3 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 text-gray-600 hover:bg-gray-50">
+                3. 스트레스와 건강 (인과관계)
+            </button>
+            <button onclick="switchTab(4)" id="tab-btn-4" class="tab-btn w-full text-left px-3 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 text-gray-600 hover:bg-gray-50">
+                4. 우리를 지키는 비밀 마크 도감
+            </button>
+        </nav>
+        <div class="p-3 bg-yellow-50 rounded-xl border border-yellow-200 text-[11px] text-yellow-800 leading-relaxed">
+            <strong>💡 교사 안내:</strong> 아이들이 직접 발표하며 스마트보드의 번호를 터치해 볼 수 있도록 권장해주세요.
+        </div>
+    </aside>
+
+    <!-- 우측 슬라이드 콘텐츠 컨테이너 -->
+    <section class="lg:col-span-3 flex flex-col gap-6">
+
+        <!-- 1단계: 난각번호 해독 -->
+        <div id="content-1" class="tab-content active bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100">
+            <h2 class="text-2xl md:text-3xl font-jua text-emerald-800 mb-2">🔎 사건 파일 #1: 달걀 껍데기 속 '비밀 코드'</h2>
+            <p class="text-sm md:text-base text-gray-600 mb-6">
+                우리가 매일 먹는 달걀의 껍데기에는 아주 중요한 <strong>지구 정보 암호</strong>가 숨겨져 있어요. 3D 달걀에 새겨진 비밀 코드를 직접 클릭해 암호를 풀어보세요!
+            </p>
+
+            <!-- 달걀 단독 중앙 정렬 레이아웃 -->
+            <div class="max-w-xl mx-auto">
+                <!-- 3D 달걀 아트 및 난각번호 해독기 -->
+                <div class="bg-amber-50/40 border border-amber-100 rounded-3xl p-6 text-center shadow-inner flex flex-col items-center">
+                    <div class="text-xs bg-amber-200 text-amber-900 font-bold px-3 py-1 rounded-full w-fit mb-2 font-jua animate-pulse">💡 달걀 위의 글씨를 터치해보세요!</div>
+                    
+                    <!-- 3D 입체 달걀 그래픽 구현 -->
+                    <div class="relative w-60 h-72 my-4 flex flex-col items-center justify-center">
+                        <!-- 달걀 바닥 그림자 -->
+                        <div class="absolute bottom-1 w-44 h-5 bg-black/10 rounded-full blur-md"></div>
+                        
+                        <!-- 3D 입체형 달걀 본체 -->
+                        <div class="relative w-48 h-64 rounded-[50%_50%_50%_50%_/_65%_65%_35%_35%] bg-gradient-to-br from-[#fbe3cf] via-[#e2b793] to-[#b3855c] shadow-[inset_-12px_-12px_24px_rgba(0,0,0,0.22),0_8px_16px_rgba(0,0,0,0.15)] flex items-center justify-center transition-transform hover:scale-105 active:scale-95 duration-300 cursor-pointer">
+                            <!-- 달걀 표면 빛 반사 하이라이트 -->
+                            <div class="absolute top-6 left-8 w-10 h-14 bg-white/20 rounded-full blur-[2px] transform -rotate-12"></div>
+                            
+                            <!-- 실제 잉크로 날인된 난각번호 구현 -->
+                            <div class="text-center font-mono font-bold tracking-wider text-[#781d1e] drop-shadow-[0_1px_1px_rgba(255,255,255,0.3)] opacity-85 transform -rotate-2 select-none pointer-events-auto">
+                                <!-- 첫째 줄: 산란일자 -->
+                                <div class="text-3xl mb-1">
+                                    <span onclick="decrypt('date'); event.stopPropagation();" class="cursor-pointer px-1.5 py-0.5 rounded bg-red-500/10 hover:bg-red-600 hover:text-white hover:opacity-100 transition-all duration-150 border border-transparent hover:border-red-700" title="산란일자 (10월 12일)">1012</span>
+                                </div>
+                                <!-- 둘째 줄: 고유번호 및 사육환경 -->
+                                <div class="text-2xl flex items-center justify-center gap-1">
+                                    <span onclick="decrypt('maker'); event.stopPropagation();" class="cursor-pointer px-1 py-0.5 rounded bg-blue-500/10 hover:bg-blue-600 hover:text-white hover:opacity-100 transition-all duration-150 border border-transparent hover:border-blue-700" title="생산농장 고유코드">M3FDS</span>
+                                    <span onclick="decrypt('env'); event.stopPropagation();" class="cursor-pointer px-2 py-0.5 rounded bg-yellow-400/30 border-2 border-yellow-500 hover:bg-yellow-500 hover:text-white transition-all duration-150 animate-bounce" title="사육환경번호 (2번)">2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 디코딩 결과 출력 공간 -->
+                    <div id="decrypt-box" class="bg-white p-4 rounded-2xl border border-amber-100 min-h-[110px] w-full flex items-center justify-center text-sm text-gray-700 shadow-sm">
+                        <p class="font-semibold text-gray-500 leading-relaxed">입체 달걀 위에 새겨진 <span class="text-red-700 font-bold underline decoration-dotted">빨간 비밀코드 글씨</span>를 터치해 단서를 수집하세요!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 flex justify-end">
+                <button onclick="switchTab(2)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-jua px-6 py-3 rounded-2xl shadow transition">다음 단계로 이동하기 ➔</button>
+            </div>
+        </div>
+
+        <!-- 2단계: 닭이 사는 네 가지 세상 비교 시뮬레이터 -->
+        <div id="content-2" class="tab-content bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100">
+            <h2 class="text-2xl md:text-3xl font-jua text-emerald-800 mb-2">🏡 사육환경번호 (1번, 2번, 3번, 4번) 비교 체험</h2>
+            <p class="text-sm md:text-base text-gray-600 mb-4">
+                달걀 껍데기의 맨 마지막 숫자는 <strong>닭이 살아간 평생의 환경</strong>을 뜻해요. 버튼을 눌러 각 환경의 사육 밀도 차이를 시각적으로 비교해 보세요!
+            </p>
+
+            <!-- 1~4번 토글 버튼 그룹 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <button onclick="visualizeDensity(1)" id="dens-btn-1" class="px-3 py-3 rounded-xl font-jua text-xs md:text-sm shadow transition bg-green-600 text-white border-2 border-green-600 flex flex-col items-center">
+                    <span class="text-lg">🌲 1번</span>
+                    <span>방사 (자유로운 야외 마당)</span>
+                </button>
+                <button onclick="visualizeDensity(2)" id="dens-btn-2" class="px-3 py-3 rounded-xl font-jua text-xs md:text-sm shadow transition bg-gray-100 text-gray-600 border-2 border-transparent hover:bg-gray-200 flex flex-col items-center">
+                    <span class="text-lg">🏠 2번</span>
+                    <span>평사 (실내 자유 축사)</span>
+                </button>
+                <button onclick="visualizeDensity(3)" id="dens-btn-3" class="px-3 py-3 rounded-xl font-jua text-xs md:text-sm shadow transition bg-gray-100 text-gray-600 border-2 border-transparent hover:bg-gray-200 flex flex-col items-center">
+                    <span class="text-lg">🗳️ 3번</span>
+                    <span>개선 케이지 (조금 개선된 철창)</span>
+                </button>
+                <button onclick="visualizeDensity(4)" id="dens-btn-4" class="px-3 py-3 rounded-xl font-jua text-xs md:text-sm shadow transition bg-gray-100 text-gray-600 border-2 border-transparent hover:bg-gray-200 flex flex-col items-center">
+                    <span class="text-lg">⛓️ 4번</span>
+                    <span>기존 케이지 (비좁은 닭장 철창)</span>
+                </button>
+            </div>
+
+            <!-- 시각화 영역 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                <!-- 실제 공간 시뮬레이터 캔버스 프레임 -->
+                <div class="lg:col-span-7 bg-slate-50 border-2 border-slate-200 rounded-3xl p-5 flex flex-col items-center justify-between">
+                    <div class="text-center w-full">
+                        <span id="simulator-title" class="font-jua text-lg md:text-xl text-emerald-800 block mb-1">🌲 행복한 자유 방목 환경 (1번 방사)</span>
+                        <span id="simulator-area" class="text-sm text-emerald-600 font-bold bg-emerald-50 px-3 py-1 rounded-full">마리당 면적: 1.1 ㎡ (초원 방목)</span>
+                    </div>
+                    
+                    <!-- 가상 사육 밀도 맵 -->
+                    <div id="density-map" class="relative w-full aspect-[4/3] max-w-[360px] rounded-2xl border-4 border-green-500 overflow-hidden bg-gradient-to-br from-green-100 to-emerald-200 shadow-inner flex items-center justify-center transition-all duration-500 my-4">
+                        <!-- 동적으로 닭 아이콘이 렌더링될 컨테이너 -->
+                        <div id="chicken-field" class="absolute inset-0 p-4 transition-all duration-500">
+                            <!-- JS를 통해 각 사육환경에 걸맞는 밀도와 스타일을 직접 주입 -->
+                        </div>
+                    </div>
+                    
+                    <!-- 설명 낭독 컨트롤러 레이아웃 -->
+                    <div class="w-full flex flex-col items-center gap-3">
+                        <div id="density-desc" class="text-center text-sm md:text-base font-bold text-gray-700 leading-relaxed bg-white p-3 rounded-xl border border-gray-150 w-full shadow-sm">
+                            닭들이 푸른 풀밭과 따뜻한 햇살 아래서 스트레스 없이 날개를 펼치며 노닐고 있는 아주 행복한 자연 환경입니다!
+                        </div>
+                        
+                        <!-- 음성 듣기 버튼 -->
+                        <button onclick="speakCurrentEnvironment()" class="w-full bg-indigo-600 hover:bg-indigo-700 active:scale-[0.98] text-white py-3 px-5 rounded-2xl font-jua text-sm md:text-base flex items-center justify-center gap-2 shadow-md transition duration-150">
+                            <span class="text-lg">🔊</span>
+                            <span>설명 귀로 듣기 (소리 켜기)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 텍스트 비교 대조 피드백 카드 -->
+                <div class="lg:col-span-5 flex flex-col gap-3 justify-center">
+                    <div id="card-1" class="p-4 bg-green-50 border-2 border-green-300 rounded-2xl transition-all duration-300">
+                        <h4 class="font-jua text-green-800 text-base mb-1 flex items-center gap-1.5">
+                            <span>🌲 1번 방사 (야외 마당)</span>
+                        </h4>
+                        <p class="text-xs text-gray-600 font-semibold">제공 면적: <strong class="text-sm text-green-700">1.1㎡ / 마리</strong></p>
+                        <p class="text-xs md:text-sm text-gray-600 mt-1 leading-relaxed">자유롭게 흙목욕을 하고 풀을 뜯어먹으며 닭 본래의 활력 넘치는 습성을 백분 발휘할 수 있는 환상적인 숲속 마당 놀이터예요.</p>
+                    </div>
+
+                    <div id="card-2" class="p-4 bg-gray-50 border border-gray-200 rounded-2xl transition-all duration-300">
+                        <h4 class="font-jua text-gray-700 text-base mb-1 flex items-center gap-1.5">
+                            <span>🏠 2번 평사 (실내 자유축사)</span>
+                        </h4>
+                        <p class="text-xs text-gray-600 font-semibold">제공 면적: <strong class="text-sm text-gray-700">0.11㎡ / 마리</strong> (약 9마리/㎡)</p>
+                        <p class="text-xs md:text-sm text-gray-600 mt-1 leading-relaxed">비바람을 막아주는 안전한 실내 평평한 바닥에서 철창 없이 닭들이 서로 자유롭게 걸어 다니고 둥지를 쓸 수 있는 평화로운 내부 주거공간입니다.</p>
+                    </div>
+
+                    <div id="card-3" class="p-4 bg-gray-50 border border-gray-200 rounded-2xl transition-all duration-300">
+                        <h4 class="font-jua text-gray-700 text-base mb-1 flex items-center gap-1.5">
+                            <span>🗳️ 3번 개선 케이지 (개선된 철창)</span>
+                        </h4>
+                        <p class="text-xs text-gray-600 font-semibold">제공 면적: <strong class="text-sm text-gray-700">0.075㎡ / 마리</strong> (약 13마리/㎡)</p>
+                        <p class="text-xs md:text-sm text-gray-600 mt-1 leading-relaxed">철창 케이지이지만, 기존 4번에 비해서는 살짝 면적이 넓어져 날개짓을 해보거나 조금 덜 포개어 지내도록 법을 개정한 완충 철망입니다.</p>
+                    </div>
+
+                    <div id="card-4" class="p-4 bg-gray-50 border border-gray-200 rounded-2xl transition-all duration-300">
+                        <h4 class="font-jua text-gray-700 text-base mb-1 flex items-center gap-1.5">
+                            <span>⛓️ 4번 기존 케이지 (비좁은 철창)</span>
+                        </h4>
+                        <p class="text-xs text-gray-600 font-semibold">제공 면적: <strong class="text-sm text-red-600">0.05㎡ / 마리</strong> (A4 용지보다 좁음)</p>
+                        <p class="text-xs md:text-sm text-gray-600 mt-1 leading-relaxed">A4 용지 한 장보다도 비좁은 철창 안에 여러 마리가 포개어 갇혀, 오직 알 낳기 기계처럼 날개조차 펴보지 못하고 극도의 슬픔과 스트레스를 겪는 철창 감옥입니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 flex justify-between">
+                <button onclick="switchTab(1)" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-jua px-5 py-3 rounded-2xl transition">이전으로</button>
+                <button onclick="switchTab(3)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-jua px-6 py-3 rounded-2xl shadow transition">다음 단계로 이동하기 ➔</button>
+            </div>
+        </div>
+
+        <!-- 3단계: 스트레스의 나비효과 (인과관계) -->
+        <div id="content-3" class="tab-content bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100">
+            <h2 class="text-2xl md:text-3xl font-jua text-emerald-800 mb-2">🦋 스트레스의 나비효과 (인과관계 파헤치기)</h2>
+            <p class="text-sm md:text-base text-gray-600 mb-6">
+                닭들이 사는 주거 환경이 어떻게 <strong>우리들의 입 속 건강과 지구의 미래</strong>로 전해지는지 그 연결고리를 찾아내봅시다.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
+                <!-- 악순환 루프 (Red Loop) -->
+                <div class="border-2 border-red-100 rounded-3xl p-5 bg-red-50/40">
+                    <h3 class="font-jua text-lg md:text-xl text-red-600 flex items-center gap-2 mb-4">
+                        🚨 아픈 악순환 (Red Vicious Cycle)
+                    </h3>
+                    <div class="flex flex-col gap-2 text-xs md:text-sm">
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-red-100 flex items-center gap-2.5">
+                            <span class="bg-red-500 text-white font-bold w-5 h-5 rounded-full flex items-center justify-center text-xs">1</span>
+                            <span>좁은 철창 속에서의 <strong>극심한 스트레스</strong></span>
+                        </div>
+                        <div class="text-center text-red-300 font-bold text-xs py-0.5">▼</div>
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-red-100 flex items-center gap-2.5">
+                            <span class="bg-red-500 text-white font-bold w-5 h-5 rounded-full flex items-center justify-center text-xs">2</span>
+                            <span>면역력이 약해져 각종 질병에 쉽게 감염</span>
+                        </div>
+                        <div class="text-center text-red-300 font-bold text-xs py-0.5">▼</div>
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-red-100 flex items-center gap-2.5">
+                            <span class="bg-red-500 text-white font-bold w-5 h-5 rounded-full flex items-center justify-center text-xs">3</span>
+                            <span class="text-red-700 font-bold">독한 약(항생제)을 가축들에게 지속 투입</span>
+                        </div>
+                        <div class="text-center text-red-300 font-bold text-xs py-0.5">▼</div>
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-red-100 flex items-center gap-2.5">
+                            <span class="bg-red-500 text-white font-bold w-5 h-5 rounded-full flex items-center justify-center text-xs">4</span>
+                            <span>그 고기와 달걀을 먹어 <strong>우리 몸에 성분 축적</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 선순환 루프 (Green Loop) -->
+                <div class="border-2 border-green-100 rounded-3xl p-5 bg-green-50/40">
+                    <h3 class="font-jua text-lg md:text-xl text-green-700 flex items-center gap-2 mb-4">
+                        🍀 건강한 선순환 (Green Virtuous Cycle)
+                    </h3>
+                    <div class="flex flex-col gap-2 text-xs md:text-sm">
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-green-100 flex items-center gap-2.5">
+                            <span class="bg-green-500 text-white font-bold w-5 h-5 rounded-full flex items-center justify-center text-xs">1</span>
+                            <span>마당에서 따스한 햇살을 받으며 <strong>행복함</strong></span>
+                        </div>
+                        <div class="text-center text-green-300 font-bold text-xs py-0.5">▼</div>
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-green-100 flex items-center gap-2.5">
+                            <span class="bg-green-500 text-white font-bold w-5 h-5 rounded-full flex items-center justify-center text-xs">2</span>
+                            <span>체력과 면역력이 길러져 아프지 않음</span>
+                        </div>
+                        <div class="text-center text-green-300 font-bold text-xs py-0.5">▼</div>
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-green-100 flex items-center gap-2.5">
+                            <span class="bg-green-500 text-white font-bold w-5 h-5 rounded-full flex items-center justify-center text-xs">3</span>
+                            <span class="text-green-800 font-bold">독한 항생제를 거의 쓸 필요가 없음</span>
+                        </div>
+                        <div class="text-center text-green-300 font-bold text-xs py-0.5">▼</div>
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-green-100 flex items-center gap-2.5">
+                            <span class="bg-green-500 text-white font-bold w-5 h-5 rounded-full flex items-center justify-center text-xs">4</span>
+                            <span>영양 가득 안전한 음식을 먹고 <strong>우리 몸도 건강</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 요약 강조 보드 -->
+            <div class="bg-emerald-800 text-white rounded-2xl p-5 text-center shadow-lg mt-4">
+                <p class="font-jua text-base md:text-lg text-yellow-300">🔑 가장 중요한 핵심 연결고리!</p>
+                <p class="text-xs md:text-sm mt-1.5 leading-relaxed text-emerald-100">
+                    "동식물에게 항생제와 화학농약이 나쁜 영향력을 미치듯, 동물이 건강하고 안전해야만 우리도 건강해질 수 있습니다.<br>
+                    <strong>동물의 생명 환경과 나의 안전은 하나로 긴밀하게 연결되어 있습니다! (원헬스 One Health)</strong>"
+                </p>
+            </div>
+
+            <div class="mt-8 flex justify-between">
+                <button onclick="switchTab(2)" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-jua px-5 py-3 rounded-2xl transition">이전으로</button>
+                <button onclick="switchTab(4)" class="bg-emerald-600 hover:bg-emerald-700 text-white font-jua px-6 py-3 rounded-2xl shadow transition">다음 단계로 이동하기 ➔</button>
+            </div>
+        </div>
+
+        <!-- 4단계: 비밀 마크 도감 -->
+        <div id="content-4" class="tab-content bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100">
+            <h2 class="text-2xl md:text-3xl font-jua text-emerald-800 mb-2">🛡️ 사건 파일 #2: 식탁을 구하는 초록빛 '비밀 마크'</h2>
+            <p class="text-sm md:text-base text-gray-600 mb-6">
+                3학년 때 배웠던 친환경 식물 요원의 마크를 기억하나요? 이제 업로드해주신 농림축산식품부 공식 인증 마크 디자인을 완벽 재현해 보았습니다. 자세히 살펴볼까요!
+            </p>
+
+            <!-- 친환경 인증마크 그리드 레이아웃 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 my-6">
+                
+                <!-- 유기농 마크 카드 (식물) -->
+                <div class="border-2 border-emerald-200 rounded-2xl p-4 bg-gradient-to-br from-emerald-50/50 to-white hover:shadow-md transition flex gap-4 items-start">
+                    <!-- 유기농 SVG 마크 -->
+                    <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="100" rx="16" fill="#1e5428" />
+                            <rect x="5" y="5" width="90" height="90" rx="12" fill="none" stroke="white" stroke-width="2" />
+                            <!-- 이파리 모양 장식 -->
+                            <path d="M 20 65 C 25 35, 60 25, 80 30 C 70 55, 35 68, 20 65 Z" fill="#4caf50" opacity="0.8"/>
+                            <text x="50" y="28" fill="white" font-family="'Nanum Gothic'" font-size="10" font-weight="bold" text-anchor="middle">농림축산식품부</text>
+                            <text x="50" y="58" fill="white" font-family="'Jua'" font-size="22" font-weight="bold" text-anchor="middle" letter-spacing="1">유기농</text>
+                            <text x="50" y="80" fill="#a5d6a7" font-family="'Nanum Gothic'" font-size="9" font-weight="bold" text-anchor="middle">ORGANIC</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <h4 class="font-jua text-base text-emerald-900">유기농 농산물</h4>
+                            <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold">3학년 복습</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            화학비료와 농약을 단 1g도 단 한 방울도 전혀 쓰지 않고 키운 가장 완벽하고 정직한 채소와 과일이에요!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 무농약 마크 카드 (식물) -->
+                <div class="border-2 border-green-200 rounded-2xl p-4 bg-gradient-to-br from-green-50/50 to-white hover:shadow-md transition flex gap-4 items-start">
+                    <!-- 무농약 SVG 마크 -->
+                    <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="100" rx="16" fill="#2d6a4f" />
+                            <rect x="5" y="5" width="90" height="90" rx="12" fill="none" stroke="white" stroke-width="2" />
+                            <path d="M 20 65 C 25 35, 60 25, 80 30 C 70 55, 35 68, 20 65 Z" fill="#74c69d" opacity="0.8"/>
+                            <text x="50" y="28" fill="white" font-family="'Nanum Gothic'" font-size="10" font-weight="bold" text-anchor="middle">농림축산식품부</text>
+                            <text x="50" y="58" fill="white" font-family="'Jua'" font-size="22" font-weight="bold" text-anchor="middle" letter-spacing="1">무농약</text>
+                            <text x="50" y="80" fill="#b7e4c7" font-family="'Nanum Gothic'" font-size="8" font-weight="bold" text-anchor="middle">NON PESTICIDE</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <h4 class="font-jua text-base text-green-900">무농약 농산물</h4>
+                            <span class="text-[10px] bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-bold">3학년 복습</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            화학농약은 아예 사용하지 않고, 화학비료는 가이드라인 기준 3분의 1 이하로만 아주 소량 써서 키워냈습니다!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 무항생제 마크 카드 (동물) -->
+                <div class="border-2 border-amber-200 rounded-2xl p-4 bg-gradient-to-br from-amber-50/50 to-white hover:shadow-md transition flex gap-4 items-start">
+                    <!-- 무항생제 SVG 마크 -->
+                    <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="100" rx="16" fill="#b17a14" />
+                            <rect x="5" y="5" width="90" height="90" rx="12" fill="none" stroke="white" stroke-width="2" />
+                            <circle cx="50" cy="55" r="28" fill="#d9a032" opacity="0.3"/>
+                            <text x="50" y="28" fill="white" font-family="'Nanum Gothic'" font-size="10" font-weight="bold" text-anchor="middle">농림축산식품부</text>
+                            <text x="50" y="58" fill="white" font-family="'Jua'" font-size="20" font-weight="bold" text-anchor="middle" letter-spacing="0.5">무항생제</text>
+                            <text x="50" y="80" fill="#fde2e4" font-family="'Nanum Gothic'" font-size="7.5" font-weight="bold" text-anchor="middle">ANTIBIOTIC-FREE</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <h4 class="font-jua text-base text-amber-900">무항생제 축산물</h4>
+                            <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-bold">4학년 신규</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            동물의 면역력을 위협하는 성장 촉진 주사나 독한 항생제 성분을 사료에 절대 타지 않고 면역력을 건강히 지켜 기른 고기나 달걀입니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 유기축산물 마크 카드 (동물 - 최고 등급) -->
+                <div class="border-2 border-yellow-200 rounded-2xl p-4 bg-gradient-to-br from-yellow-50/50 to-white hover:shadow-md transition flex gap-4 items-start">
+                    <!-- 유기축산물 SVG 마크 -->
+                    <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="100" rx="16" fill="#8c6200" />
+                            <rect x="5" y="5" width="90" height="90" rx="12" fill="none" stroke="white" stroke-width="2" />
+                            <polygon points="50,20 80,80 20,80" fill="#ffd700" opacity="0.2"/>
+                            <text x="50" y="28" fill="white" font-family="'Nanum Gothic'" font-size="10" font-weight="bold" text-anchor="middle">농림축산식품부</text>
+                            <text x="50" y="58" fill="white" font-family="'Jua'" font-size="18" font-weight="bold" text-anchor="middle" letter-spacing="0.5">유기축산물</text>
+                            <text x="50" y="80" fill="#fff3b0" font-family="'Nanum Gothic'" font-size="8" font-weight="bold" text-anchor="middle">ORGANIC ANIMAL</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <h4 class="font-jua text-base text-yellow-900">유기축산물</h4>
+                            <span class="text-[10px] bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full font-bold">4학년 최고단계</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            항생제 무사용 원칙은 당연하고, 가축이 먹는 가축 사료까지 전부 100% 농약 없는 유기농 사료만 먹인 최고의 정직 고기입니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 동물복지 마크 카드 (동물복지 자유방목 연계) -->
+                <div class="border-2 border-sky-200 rounded-2xl p-4 bg-gradient-to-br from-sky-50/50 to-white hover:shadow-md transition flex gap-4 items-start sm:col-span-2">
+                    <!-- 동물복지 SVG 마크 -->
+                    <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="100" height="100" rx="16" fill="#028090" />
+                            <rect x="5" y="5" width="90" height="90" rx="12" fill="none" stroke="white" stroke-width="2" />
+                            <path d="M 30,70 Q 50,20 70,70 Z" fill="#00bfb2" opacity="0.4"/>
+                            <text x="50" y="28" fill="white" font-family="'Nanum Gothic'" font-size="10" font-weight="bold" text-anchor="middle">농림축산식품부</text>
+                            <text x="50" y="58" fill="white" font-family="'Jua'" font-size="18" font-weight="bold" text-anchor="middle" letter-spacing="0.5">동물복지</text>
+                            <text x="50" y="80" fill="#e0fbfc" font-family="'Nanum Gothic'" font-size="8" font-weight="bold" text-anchor="middle">ANIMAL WELFARE</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <h4 class="font-jua text-base text-sky-950">동물복지 인증 마크</h4>
+                            <span class="text-[10px] bg-sky-100 text-sky-800 px-2 py-0.5 rounded-full font-bold">달걀 1, 2번 연계</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            동물이 본래의 타고난 습성을 자유롭게 누릴 수 있도록 인도적인 환경을 완벽하게 갖춘 농장에만 선사하는 국가 최고 공인 가축 마크예요!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 생각 나누기 피드백 보드 -->
+            <div class="bg-emerald-50 rounded-2xl border border-emerald-100 p-4 mt-6">
+                <h5 class="font-jua text-emerald-800 text-sm mb-1 flex items-center gap-1.5">💬 우리 요원들의 약속 다짐</h5>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    선생님과 함께 이 초록빛 비밀 마크들을 꼭 눈에 익혀두세요! 마트에서 장을 볼 때나 학교 급식실에서 친환경 축산물 메뉴를 마주했을 때 발견해내어 스스로의 몸과 건강한 지구 환경을 선택하는 똑똑한 요원이 되기로 해요!
+                </p>
+            </div>
+
+            <div class="mt-8 flex justify-between">
+                <button onclick="switchTab(3)" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-jua px-5 py-3 rounded-2xl transition">이전으로</button>
+                <button onclick="resetToFirst()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-jua px-6 py-3 rounded-2xl shadow transition">처음으로 돌아가기 🔄</button>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- 하단 푸터 -->
+<footer class="bg-gray-900 text-gray-400 text-xs py-5 mt-8 border-t border-gray-800 text-center">
+    <div class="max-w-7xl mx-auto px-4">
+        <p class="font-semibold text-gray-500 mb-1">© 2026 구미봉곡초등학교 지속가능한 미래 식생활 교육본부.</p>
+        <p class="text-[10px] text-gray-600">영양교사 권민혜 기획 | 본 자료는 초등학교 교실 현장의 배움 목적으로 제작된 에듀테크 콘텐츠입니다.</p>
+    </div>
+</footer>
+
+<script>
+    // 현재 선택된 사육환경 번호 저장 변수
+    let currentSelectedEnvironment = 1;
+
+    // 탭 이동 기능
+    function switchTab(tabNum) {
+        // 음성 출력 중단
+        stopSpeaking();
+
+        // 모든 탭 컨텐츠 하이드
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+
+        // 모든 좌측 탭 버튼 스타일 원복
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.className = "tab-btn w-full text-left px-3 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 text-gray-600 hover:bg-gray-50";
+        });
+
+        // 타깃 활성화
+        const targetContent = document.getElementById('content-' + tabNum);
+        if (targetContent) {
+            targetContent.classList.add('active');
+        }
+
+        const targetBtn = document.getElementById('tab-btn-' + tabNum);
+        if (targetBtn) {
+            targetBtn.className = "tab-btn w-full text-left px-3 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 bg-emerald-50 text-emerald-700 border-l-4 border-emerald-600";
+        }
+
+        // 만약 2번 탭(시뮬레이터)이 활성화되었을 때, 1번 농장 자동 렌더링
+        if (tabNum === 2) {
+            visualizeDensity(1);
+        }
+
+        // 스크롤 상단 이동
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 처음으로 돌아가기
+    function resetToFirst() {
+        switchTab(1);
+    }
+
+    // 1단계: 달걀 번호 해독기
+    function decrypt(part) {
+        const resultBox = document.getElementById('decrypt-box');
+        let contentHtml = "";
+
+        if (part === 'date') {
+            contentHtml = `
+                <div class="text-left">
+                    <span class="bg-red-100 text-red-800 font-bold px-2 py-0.5 rounded text-xs mb-1.5 inline-block">📅 산란일자</span>
+                    <p class="font-bold text-gray-800 text-base">"10월 12일에 생산된 달걀이에요!"</p>
+                    <p class="text-xs text-gray-500 mt-1">가장 앞에 위치한 네 자리 숫자는 이 닭이 알을 낳은 진짜 날짜를 명확하게 지칭해줍니다.</p>
+                </div>
+            `;
+        } else if (part === 'maker') {
+            contentHtml = `
+                <div class="text-left">
+                    <span class="bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded text-xs mb-1.5 inline-block">🏢 생산자 고유번호</span>
+                    <p class="font-bold text-gray-800 text-base">"M3FDS 농장의 닭들이 낳았어요!"</p>
+                    <p class="text-xs text-gray-500 mt-1">가축을 사육하고 알을 공급하는 고유한 등록 농장의 신원 정보를 가리키는 영문 및 숫자로 조합된 약속번호입니다.</p>
+                </div>
+            `;
+        } else if (part === 'env') {
+            contentHtml = `
+                <div class="text-left">
+                    <span class="bg-yellow-300 text-yellow-950 font-bold px-2 py-0.5 rounded text-xs mb-1.5 inline-block">🏠 사육환경번호 (가장 중요!)</span>
+                    <p class="font-bold text-gray-800 text-base">"이 번호에 따라 동물의 복지와 우리 건강이 달라져요!"</p>
+                    <p class="text-xs text-gray-600 mt-1">사육환경번호는 <strong>1부터 4까지</strong> 존재하며, 숫자가 작을수록 닭들이 좁은 철창을 벗어나 행복하게 모래 장난을 하며 넓은 환경에서 건강하게 자유를 누리고 자란 달걀을 의미한답니다.</p>
+                </div>
+            `;
+        }
+
+        resultBox.innerHTML = contentHtml;
+        resultBox.classList.add('border-emerald-300', 'bg-emerald-50/50');
+        setTimeout(() => {
+            resultBox.classList.remove('border-emerald-300', 'bg-emerald-50/50');
+        }, 1000);
+    }
+
+    // 2단계: 사육 밀도 시뮬레이터 조종기 (1번, 2번, 3번, 4번 동적 생성)
+    function visualizeDensity(num) {
+        // 새로운 환경 선택 시 음성 자동 멈춤
+        stopSpeaking();
+        currentSelectedEnvironment = num;
+
+        const field = document.getElementById('chicken-field');
+        const map = document.getElementById('density-map');
+        const title = document.getElementById('simulator-title');
+        const area = document.getElementById('simulator-area');
+        const desc = document.getElementById('density-desc');
+
+        // 버튼 클래스 초기화 및 활성화 지정
+        for (let i = 1; i <= 4; i++) {
+            const btn = document.getElementById('dens-btn-' + i);
+            const card = document.getElementById('card-' + i);
+            if (i === num) {
+                btn.className = "px-3 py-3 rounded-xl font-jua text-xs md:text-sm shadow transition bg-emerald-600 text-white border-2 border-emerald-600 flex flex-col items-center";
+                card.className = "p-4 bg-green-50 border-2 border-green-300 rounded-2xl transition-all duration-300 scale-[1.02] shadow-sm";
+            } else {
+                btn.className = "px-3 py-3 rounded-xl font-jua text-xs md:text-sm shadow transition bg-gray-100 text-gray-600 border-2 border-transparent hover:bg-gray-200 flex flex-col items-center";
+                card.className = "p-4 bg-gray-50 border border-gray-200 rounded-2xl transition-all duration-300 opacity-60";
+            }
+        }
+
+        // 사육 상태별 닭 개수 및 테마 렌더링
+        let chickenCount = 0;
+        let mapStyle = "";
+        let chickenIcon = "";
+        let isCage = false;
+
+        if (num === 1) {
+            title.innerText = "🌲 1번: 방사 농장 (마당 자유 방목)";
+            area.innerText = "닭 1마리당 제공 면적: 약 1.1 ㎡";
+            desc.innerText = "닭들이 푸른 풀밭과 따뜻한 햇살 아래서 스트레스 없이 날개를 펼치며 노닐고 있는 아주 행복한 자연 환경입니다!";
+            mapStyle = "bg-gradient-to-br from-green-100 to-emerald-200 border-green-500";
+            chickenCount = 1; // 1.1㎡ 기준 1마리
+            chickenIcon = "🐓"; 
+        } else if (num === 2) {
+            title.innerText = "🏠 2번: 평사 농장 (실내 자유축사)";
+            area.innerText = "닭 1마리당 제공 면적: 약 0.11 ㎡ (평당 밀도)";
+            desc.innerText = "비바람을 막아주는 안전한 실내 평평한 바닥에서 철창 없이 닭들이 서로 자유롭게 걸어 다니고 둥지를 쓸 수 있는 평화로운 내부 주거공간입니다.";
+            mapStyle = "bg-gradient-to-br from-amber-100 to-yellow-100 border-amber-400";
+            chickenCount = 9; // 9마리/㎡
+            chickenIcon = "🐔";
+        } else if (num === 3) {
+            title.innerText = "🗳️ 3번: 개선 케이지 (조금 개선된 닭장)";
+            area.innerText = "닭 1마리당 제공 면적: 약 0.075 ㎡ (철망 사육)";
+            desc.innerText = "철창 케이지이지만, 기존 4번에 비해서는 살짝 면적이 넓어져 날개짓을 해보거나 조금 덜 포개어 지내도록 법을 개정한 완충 철망입니다.";
+            mapStyle = "bg-gradient-to-br from-orange-50 to-orange-100 border-orange-400";
+            chickenCount = 13; // 13마리/㎡
+            chickenIcon = "🐔";
+            isCage = true;
+        } else if (num === 4) {
+            title.innerText = "⛓️ 4번: 기존 케이지 (좁은 철창 케이지)";
+            area.innerText = "닭 1마리당 제공 면적: 약 0.05 ㎡ (A4 종이보다 비좁음)";
+            desc.innerText = "A4 용지 한 장보다도 비좁은 철창 안에 여러 마리가 포개어 갇혀, 오직 알 낳기 기계처럼 날개조차 펴보지 못하고 극도의 슬픔과 스트레스를 겪는 철창 감옥입니다.";
+            mapStyle = "bg-gradient-to-br from-red-50 to-red-100 border-red-500";
+            chickenCount = 20; // 20마리/㎡
+            chickenIcon = "🐔";
+            isCage = true;
+        }
+
+        // 지도의 디자인 갱신
+        map.className = `relative w-full aspect-[4/3] max-w-[360px] rounded-2xl border-4 overflow-hidden shadow-inner flex items-center justify-center transition-all duration-500 my-4 ${mapStyle}`;
+
+        // 닭들을 컨테이너 내부에 무작위/조밀하게 뿌리기
+        field.innerHTML = "";
+        
+        // 철창 격자 렌더링 (3, 4번일 때 뒷배경에 감옥 철창 생성)
+        if (isCage) {
+            const cageGrid = document.createElement('div');
+            cageGrid.className = "absolute inset-0 grid grid-cols-6 border border-gray-400/40 pointer-events-none opacity-40 z-0";
+            for(let g=0; g<12; g++){
+                const gridBar = document.createElement('div');
+                gridBar.className = "border-r border-b border-gray-600";
+                cageGrid.appendChild(gridBar);
+            }
+            field.appendChild(cageGrid);
+        }
+
+        // 가축 이모티콘 흩뿌리기
+        for (let i = 0; i < chickenCount; i++) {
+            const el = document.createElement('span');
+            el.innerText = chickenIcon;
+            
+            // 닭마다 애니메이션 및 상태를 다르게 구현하여 몰입도 극대화
+            if (num === 1) {
+                // 방사형: 한 마리가 즐겁고 크게 통통 튐
+                el.className = "absolute text-6xl animate-bounce text-emerald-800 transition-all duration-500 z-10";
+                el.style.left = "42%";
+                el.style.top = "30%";
+            } else if (num === 2) {
+                // 평사형: 옹기종기 흩어져 여유로움
+                el.className = "absolute text-2xl transition-all duration-500 z-10 hover:scale-125";
+                const rLeft = 10 + (i % 3) * 28 + (Math.random() * 8);
+                const rTop = 15 + Math.floor(i / 3) * 25 + (Math.random() * 8);
+                el.style.left = rLeft + "%";
+                el.style.top = rTop + "%";
+            } else if (num === 3) {
+                // 개선케이지: 빽빽함 시작
+                el.className = "absolute text-xl transition-all duration-500 z-10 opacity-90";
+                const rLeft = 5 + (i % 4) * 23 + (Math.random() * 4);
+                const rTop = 10 + Math.floor(i / 4) * 24 + (Math.random() * 4);
+                el.style.left = rLeft + "%";
+                el.style.top = rTop + "%";
+            } else if (num === 4) {
+                // 기존케이지: 감옥처럼 빽빽하게 겹겹이 갇힘 (움직이지 못하고 떨림)
+                el.className = "absolute text-xl transition-all duration-500 z-10 animate-pulse font-bold filter grayscale-[30%]";
+                const rLeft = 3 + (i % 5) * 19 + (Math.random() * 3);
+                const rTop = 5 + Math.floor(i / 5) * 21 + (Math.random() * 3);
+                el.style.left = rLeft + "%";
+                el.style.top = rTop + "%";
+            }
+            
+            field.appendChild(el);
+        }
+    }
+
+    // TTS 음성 중지 함수
+    function stopSpeaking() {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+        }
+    }
+
+    // 현재 활성화된 사육환경 설명 읽기 함수
+    function speakCurrentEnvironment() {
+        if ('speechSynthesis' in window) {
+            // 현재 작동 중인 소리 모두 끄기
+            window.speechSynthesis.cancel();
+
+            const descText = document.getElementById('density-desc').innerText;
+            const titleText = document.getElementById('simulator-title').innerText;
+            
+            // 제목과 설명을 매끄럽게 연결해서 읽어줍니다.
+            const fullUtteranceText = titleText + ". " + descText;
+            
+            const utterance = new SpeechSynthesisUtterance(fullUtteranceText);
+            utterance.lang = 'ko-KR';
+            utterance.rate = 1.0; // 보통 빠르기
+            utterance.pitch = 1.1; // 아이들을 위해 아주 살짝 상냥하고 높은 톤 설정
+            
+            window.speechSynthesis.speak(utterance);
+        } else {
+            // 음성합성 비지원 브라우저 대응 안내 메시지 (기본 alert 대신 임시 메시지 박스 활용)
+            const descBox = document.getElementById('density-desc');
+            descBox.innerHTML = "⚠️ 이 브라우저에서는 소리 읽어주기 기능이 지원되지 않습니다. Chrome(크롬)이나 Edge 브라우저를 권장합니다!";
+            descBox.style.color = "#ef4444";
+        }
+    }
+</script>
+
+</body>
+</html>
